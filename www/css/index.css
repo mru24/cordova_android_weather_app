@@ -1,0 +1,269 @@
+:root {
+    --primary: #bb1b1b;
+    --secondary: #58508d;
+    --txt: #e3e3e3;
+    --bg: #00083b;
+    --bg-lt: #021bbd;
+    --border: #182696;
+}
+[data-theme="light"] {
+    --primary: #df1e1e;
+    --secondary: #58508d;
+    --txt: #e3e3e3;
+    --bg: #233142;
+    --border: #455d7a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right,var(--bg),var(--bg-lt));
+    color: var(--txt);
+    font-family: sans-serif;
+    line-height: 1.3;
+    font-size: 15px;
+}
+.container {
+    width: 99%;
+    max-width: 1200px;
+    margin: auto;
+}
+.content {
+    transition: 0.15s;
+}
+.content.form,
+.content.active {
+    padding: 10px;
+    margin: 5px;
+}
+#current-container {
+    border-radius: 22px;
+    padding: 15px 25px;
+}
+/* ********************************************** TYPOGRAPHY */
+p {
+    margin: 12px 0;
+}
+/* ********************************************** LAYOUT */
+.row {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+.col.col-2 {
+    flex: 2;
+}
+.col.col-3 {
+    flex: 3;
+}
+.col.col-4 {
+    flex: 4;
+}
+.col.col-5 {
+    flex: 5;
+}
+.col.col-6 {
+    flex: 6;
+}
+.col {
+    margin: 0 5px;
+}
+.col:first-child {
+    margin-left: 0;
+}
+.col:last-child {
+    margin-right: 0;
+}
+.grid {
+    display: grid;
+}
+.grid-2 {
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-4 {
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-6 {
+    grid-template-columns: repeat(6,1fr);
+}
+/* ********************************************** HELPER CLASSES */
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.f45 {
+    font-size: 45px;
+}
+.f36 {
+    font-size: 36px;
+}
+.f32 {
+    font-size: 32px;
+}
+.f28 {
+    font-size: 28px;
+}
+.f24 {
+    font-size: 24px;
+}
+.f22 {
+    font-size: 22px;
+}
+.f19 {
+    font-size: 19px;
+}
+.f17 {
+    font-size: 17px;
+}
+.f14 {
+    font-size: 14px;
+}
+.f12 {
+    font-size: 12px;
+}
+.pt10 {
+    padding-top: 10px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+.pt30 {
+    padding-top: 30px;
+}
+.pt40 {
+    padding-top: 40px;
+}
+.pb10 {
+    padding-bottom: 10px;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.max-width-90 {
+    max-width: 90px;
+}
+.min-width-90 {
+    min-width: 90px;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.hidden {
+    display: none;
+}
+/* ********************************************** CONTENT STYLES */
+.wind_degree {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--txt);
+    border-radius: 50%;
+    margin: 10px auto;
+    position: relative;
+}
+.wind_degree::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 2px;
+    background-color: var(--txt);
+    content: '';
+}
+input[type="text"] {
+    font-size: 32px;
+    color: var(--bg);
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0 15px;
+    text-align: center;
+    min-width: 220px;
+    background-color: #ddd;
+    border-radius: 65px;
+    border: 2px solid var(--bg-lt);
+    transition: .5s;
+}
+input[type="text"]:focus {
+    border-color: var(--border);
+}
+input[type="text"]:focus-visible {
+    border-color: var(--border);
+    outline: none;
+}
+button[type="submit"] {
+    position: absolute;
+    position: absolute;
+    margin-top: 23px;
+    font-size: 27px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+#city_selector {
+    list-style: none;
+    margin: 8px auto;
+    max-width: 300px;
+    background-color: var(--border);
+}
+#city_selector li {
+    display: block;
+    padding: 4px 30px;
+    color: var(--txt);
+    border-bottom: 1px solid var(--bg);
+    cursor: pointer;
+}
+#forecast {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#forecast li {
+    display: block;
+    padding: 5px;
+    border-bottom: 2px solid var(--border);
+}
+#forecast li ul.sub-menu {
+    margin: 10px 0;
+}
+#forecast li ul.sub-menu li {
+    padding: 4px;
+}
+
+/* ********************************************** MEDIA QUERIES */
+@media only screen and (max-width: 1200px) {
+    .grid-6 {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 700px) {
+    .row {
+        display: block;
+    }
+    .grid-6 {
+        grid-template-columns: repeat(2,1fr);
+    }    
+    input[type="text"] {
+        min-width: 1px;
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+}

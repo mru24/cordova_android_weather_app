@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div id="message" class="text-center"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="content">
+                        <div class="text-center">
+                            <div id="localtime" class="f17 data"></div>
+                            <div id="last_updated" class="f14 data"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="content form">
+                        <div class="text-center">
+                            <form id="search_form" autocomplete="off">
+                                <p>
+                                    <input type="text" name="search" id="search_field">
+                                    <button type="submit">
+                                        <img src="img/marker.png" width="20" alt="">
+                                    </button>
+                                </p>
+                            </form>
+                            <ul id="city_selector"></ul>
+                            <div id="country" class="f19 pt10 data"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="current-container">
+                <div class="row">
+                    <div class="col">
+                        <div class="">
+                            <div class="">
+                                <div id="condition-text" class="f22 data"></div>
+                                <div class="grid grid-2">
+                                    <div id="condition-icon" class="data"></div>
+                                    <div class="pt30">
+                                        <div id="temp_c" class="f45 data"></div>
+                                        <div id="temp_f" class="f45 data"></div>                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="feelslike_c" class="f14 data"></div>
+                                    <div id="feelslike_f" class="f14 data"></div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="grid grid-2">
+                    <div class="grid grid-2">                        
+                        <div id="wind_degree" class="data"></div>
+                        <div id="wind_kph" class="data"></div>
+                    </div>
+                    <div class="">
+                        <div id="pressure_mb" class="data"></div>
+                        <div id="pressure_in" class="data"></div>
+                        <div id="humidity" class="data"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="content">
+                        <ul id="forecast" class="data">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/config.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
